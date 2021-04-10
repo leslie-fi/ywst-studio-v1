@@ -1,0 +1,21 @@
+{
+  "types": [
+    {
+      "type": "post",
+      "field": "publishedAt",
+      "titleField": "title"
+    },
+    {
+      "type": "newsletter",
+      "field": "publishedAt",
+      "titleField": "title"
+    }
+  ],
+  "calendar": {
+    "event": {
+      "dateFormat": "MMMM, dd yyyy",
+      "timeFormat": "hh:mm a",
+      "showAuthor": "false"
+    }
+  }
+}
