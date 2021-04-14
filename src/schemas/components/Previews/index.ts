@@ -1,2 +1,1 @@
-export { Preview } from './iFrame/Preview';
-export {SeoPreviews} from './seo/SeoPreviews'
+export { WebPreview, MobilePreview } from './iFrame/Preview';

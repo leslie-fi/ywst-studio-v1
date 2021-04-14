@@ -17,11 +17,14 @@
     "asset-source-unsplash",
     "@sanity/dashboard",
     "media",
-    "dashboard-widget-document-list"
+    "dashboard-widget-document-list",
+    "social-preview"
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [

@@ -1,32 +1,44 @@
 export default {
-  name: 'page',
-  type: 'document',
-  title: 'Page',
+  name: "page",
+  type: "document",
+  title: "Page",
   fieldsets: [
     {
-      title: 'SEO & metadata',
-      name: 'metadata',
+      title: "SEO & metadata",
+      name: "metadata",
     },
   ],
   fields: [
     {
-      name: 'title',
-      type: 'string',
-      title: 'Title',
+      name: "title",
+      type: "string",
+      title: "Title",
     },
-
     {
-      name: 'body',
-      title: 'Body',
-      type: 'bodyPortableText',
+      name: "figure",
+      title: "Cover Image",
+      type: "figure",
     },
-    { name: 'seo', type: 'seo', fieldset: 'metadata' },
+    {
+      name: "body",
+      title: "Body",
+      type: "bodyPortableText",
+    },
+    {
+      name: "excerpt",
+      type: "excerptPortableText",
+      title: "Excerpt",
+      description:
+        "This ends up on summary pages, on Google, when people share your post in social media.",
+      fieldset: "metadata"
+    },
+    { name: "seo", type: "seo", fieldset: "metadata" },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      media: 'seo.figure',
+      title: "title",
+      media: "seo.ogImage",
     },
   },
 };

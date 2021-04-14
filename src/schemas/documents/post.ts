@@ -8,6 +8,12 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: (Rule) =>
+        Rule.max(50).warning('Longer titles may be truncated by search engines'),
+    },
+    {
+      name: 'featured',
+      type: 'boolean'
     },
     {
       name: 'slug',
@@ -32,9 +38,14 @@ export default {
       to: { type: 'author' },
     },
     {
-      name: 'figure',
+      name: 'coverImage',
       title: 'Cover Image',
       type: 'figure'
+    },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'bodyPortableText',
     },
     {
       name: 'categories',
@@ -49,19 +60,10 @@ export default {
       description: 'This can be used to schedule post for publishing',
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'bodyPortableText',
-    },
-    {
-      name: 'tags',
-      title: 'Keywords',
-      description: 'Keywords for search engines',
-      type: 'tags',
-      options: {
-        isHighlighted: true,
-      },
-    },
+      name: 'seo',
+      title: 'Seo/Social',
+      type: 'seo'
+    }
   ],
 
   preview: {
